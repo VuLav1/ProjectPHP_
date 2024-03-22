@@ -8,7 +8,7 @@
   <?php
   else :
   ?>
-    <form action="" method="post">
+    <form action="">
       <table class="table table-bordered" border="0">
         <?php
         if (isset($_SESSION['mahd'])) {

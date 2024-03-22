@@ -6,12 +6,6 @@
   <?php
   $hh = new products();
   $result = $hh->getHangHoaCPUAll();
-  $count = $result->rowCount();
-  $limit = 8;
-  $trang = new page();
-  $page = $trang->findPage($count, $limit);
-  $start = $trang->findStart($limit);
-  $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
   ?>
 
   <!-- end số lượt xem san phẩm -->
@@ -23,14 +17,11 @@
       if (isset($_GET['act'])) {
         if ($_GET['act'] == 'sanphamkhuyenmai') {
           $ac = 2;
-        }
-        elseif ($_GET['act'] == 'products') {
+        } elseif ($_GET['act'] == 'products') {
           $ac = 1;
-        }
-        elseif ($_GET['act'] == 'sanphamvga') {
+        } elseif ($_GET['act'] == 'sanphamvga') {
           $ac = 3;
-        }
-        elseif ($_GET['act'] == 'timkiem') {
+        } elseif ($_GET['act'] == 'timkiem') {
           # code...
           $ac = 4;
         }
@@ -38,30 +29,6 @@
     }
   }
   ?>
-  <div class="col-lg-12">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Content/imageProducts/showinhinhanh1.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="Content/imageProducts/showinhinhanh2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="Content/imageProducts/showinhinhanh3.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-  <!--Section: Examples-->
   <section id="examples" class="text-center">
 
     <!-- Heading -->
@@ -93,7 +60,7 @@
       $hh = new products();
       if ($ac == 1) {
         # code...
-        $result = $hh->getHangHoaAllPage($start, $limit);
+        $result = $hh->getHangHoaAllPage();
       }
       if ($ac == 2) {
         # code...
@@ -105,8 +72,8 @@
       if ($ac == 4) {
         if (isset($_POST['txtsearch'])) {
           # code...
-          $tiemkiem=$_POST['txtsearch'];
-          $result=$hh->search_products($tiemkiem);
+          $tiemkiem = $_POST['txtsearch'];
+          $result = $hh->search_products($tiemkiem);
         }
       }
       while ($set = $result->fetch()) :
@@ -144,45 +111,4 @@
       endwhile;
       ?>
     </div>
-
-    <!--Grid row-->
-
   </section>
-
-
-  <!-- end sản phẩm mới nhất -->
-
-
-  <div class="col-md-6 div col-md-offset-3">
-    <ul class="pagination">
-      <?php
-      for ($i = 1; $i <= $page; $i++) :
-      ?>
-        <li><a href="index.php?action=sanpham&page=<?php echo $i; ?>"></a></li>
-        <?php
-        echo $i;
-        ?>
-      <?php
-      endfor;
-      ?>
-    </ul>
-  </div>
-  <div class="col-md-6 div col-md-offset-3">
-    <ul class="pagination">
-      <li><a href="">1</a></li>
-    </ul>
-  </div>
-  <div class="col-md-6 div col-md-offset-3">
-    <nav aria-label="...">
-      <ul class="pagination">
-        <?php
-        for ($i = 1; $i <= $page; $i++) :
-        ?>
-          <li class="page-item"><a class="page-link" href="index.php?action=products&page=<?php echo $i; ?>"><?php echo $i ?></a></li>
-
-        <?php
-        endfor;
-        ?>
-      </ul>
-    </nav>
-  </div>

@@ -5,7 +5,7 @@
 // include_once "Model/hanghoa.php"
 session_start();
 include_once "Model/class.phpmailer.php";
-set_include_path(get_include_path().PATH_SEPARATOR.'Model/');
+set_include_path(get_include_path() . PATH_SEPARATOR . 'Model/');
 spl_autoload_extensions('.php');
 spl_autoload_register();
 ?>
@@ -36,6 +36,7 @@ spl_autoload_register();
     <link rel="stylesheet" href="./Content/CSS/san.css">
     <link rel="stylesheet" href="./Content/CSS/home.css">
     <link rel="stylesheet" type="text/css" href="./Content/CSS/Tour.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -65,7 +66,10 @@ spl_autoload_register();
     <?php
     include_once "View/footer.php"
     ?>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

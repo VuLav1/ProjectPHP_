@@ -44,9 +44,9 @@
             $result=$db->getList($select);
             return $result;
         }
-        function getHangHoaAllPage($start,$limit){
+        function getHangHoaAllPage(){
             $db=new connect();
-            $select="SELECT a.mahh,a.tenhh,b.dongia,a.soluotxem,a.hinh FROM hanghoa a,cthanghoa b where a.mahh=b.idhanghoa and a.giamgia=0 and a.idloai=4 ORDER by a.mahh DESC limit ".$start.",".$limit;
+            $select="SELECT a.mahh,a.tenhh,b.dongia,a.soluotxem,a.hinh FROM hanghoa a,cthanghoa b where a.mahh=b.idhanghoa and a.giamgia=0 and a.idloai=4 ORDER by a.mahh";
             $result=$db->getList($select);
             return $result;
         }

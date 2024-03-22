@@ -1,3 +1,4 @@
+
   <!--Section: Examples-->
   <div style="margin-bottom: 130px;" class=""></div>
   <?php
@@ -25,7 +26,7 @@
             while ($set = $result->fetch()) :
             ?>
               <!--Grid column-->
-              <div class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
+              <div data-aos="fade-up" data-aos-deplay="500" data-oas-duration="1000" class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
                   <a class="product" href="index.php?action=products&act=sanphamchitiet&id=<?php echo $set['mahh'] ?>">
                       <div style="height: 100%;" class="card rounded-0 shadow-none card-products">
                           <div class="card-body p-0">
@@ -71,7 +72,7 @@
                 while ($set = $result->fetch()) :
                 ?>
                   <!--Grid column-->
-                  <div class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
+                  <div data-aos="fade-up" data-aos-deplay="500" data-oas-duration="1000" class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
                       <a class="product" href="index.php?action=products&act=sanphamchitiet&id=<?php echo $set['mahh'] ?>">
                           <div style="height: 100%;" class="card rounded-0 shadow-none card-products">
                               <div class="card-body p-0">
@@ -120,7 +121,7 @@
                 while ($set = $result->fetch()) :
                 ?>
                   <!--Grid column-->
-                  <div class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
+                  <div data-aos="fade-up" data-aos-deplay="500" data-oas-duration="1000" class="col-lg-3 col-6 col-md-4 mb-3 text-center p-0">
                       <a class="product" href="index.php?action=products&act=sanphamchitiet&id=<?php echo $set['mahh'] ?>">
                           <div style="height: 100%;" class="card rounded-0 shadow-none card-products">
                               <div class="card-body p-0">

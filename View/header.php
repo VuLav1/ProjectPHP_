@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.php"><img src="./phandau.png " alt=""></a>
+        <a class="navbar-brand" href="index.php"><img style="height: 100px; width: 180px" src="./logo.png " alt=""></a>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -56,7 +56,7 @@
                 echo '
                     <div id="dropdown1">
                         <div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action">Xem thông tin</button>
+                            <a href="index.php?action=profile"><button type="button" class="list-group-item list-group-item-action">Xem thông tin</button></a>
                             <button type="button" class="list-group-item list-group-item-action"><a href="index.php?action=login&act=dangxuat">Đăng xuất</a></button>
                         </div>
                     </div>';
