@@ -2,7 +2,7 @@
 // include "Model/connect.php";
 // include "Model/hanghoa.php";
 // include "Model/loaisanpham.php";
-
+include_once "Model/uploadimage.php";
 session_start();
 // unset($_SESSION['admin']);
 spl_autoload_register("myModelClass");
@@ -50,7 +50,7 @@ function myModelClass($classname)
         <div class="row">
         <?php
              //load controler
-            $ctrl="login";
+            $ctrl="dangnhap";
             if(isset($_GET['action']))
                 $ctrl=$_GET['action'];
             include 'Controller/'.$ctrl.'.php';

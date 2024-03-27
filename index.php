@@ -35,6 +35,7 @@ spl_autoload_register();
     <link rel="stylesheet" href="./Content/CSS/user.css">
     <link rel="stylesheet" href="./Content/CSS/san.css">
     <link rel="stylesheet" href="./Content/CSS/home.css">
+    <link rel="stylesheet" href="./Content/CSS/profile.css">
     <link rel="stylesheet" type="text/css" href="./Content/CSS/Tour.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />

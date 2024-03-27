@@ -1,6 +1,6 @@
 <?php
-class product_category{
-    function getCategory()
+class loai{
+    function getLoai()
     {
         $db=new connect();
         $select="select * from loai";

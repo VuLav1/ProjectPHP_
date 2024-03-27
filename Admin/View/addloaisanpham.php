@@ -4,7 +4,10 @@
           QUẢN LÝ LOẠI HÀNG
         </div>
         <div class="card-body">
-        
+        <form action="index.php?action=loai&act=loai_action" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" id="">
+          <input type="submit" name="submit" value="Submit">
+        </form>
 
             <div class="form-group">
                 <label for="">Mã danh mục</label>

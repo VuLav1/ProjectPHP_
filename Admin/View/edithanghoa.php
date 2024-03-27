@@ -3,10 +3,10 @@
   {
     $mahh=$_GET['id'];
     // lấy thông tin mahh đc chọn để update
-    $hh=new products();
-    $kq=$hh->getProductID($mahh);
+    $hh=new hanghoa();
+    $kq=$hh->getHangHoaID($mahh);
     $tenhh=$kq['tenhh'];
-    $maloai=$kq['idloai'];
+    $maloai=$kq['maloai'];
     $dacbiet=$kq['dacbiet'];
     $slx=$kq['soluotxem'];
     $ngaylap=$kq['ngaylap'];
@@ -31,11 +31,11 @@
   <?php
     if($ac==1)
     {
-      echo '<form action="index.php?action=products&act=insert_action" method="post">';
+      echo '<form action="index.php?action=hanghoa&act=insert_action" method="post">';
     }
     else
     {
-      echo '<form action="index.php?action=products&act=update_action" method="post">';
+      echo '<form action="index.php?action=hanghoa&act=update_action" method="post">';
     }
   ?>
   
@@ -60,8 +60,8 @@
             {
               $selectedloai=$maloai;
             }
-              $loai=new product_category();
-              $result=$loai->getCategory();
+              $loai=new loai();
+              $result=$loai->getLoai();
               while($set=$result->fetch()):
             ?>
             <option value="<?php echo $set['maloai'];?>" <?php if($selectedloai==$set['maloai']) echo 'selected';?>><?php echo $set['tenloai'];?></option>

@@ -8,7 +8,7 @@
                 <!-- test -->
                 <nav class="navbar navbar-expand-sm bg-light navbar-light">
                     <!-- Brand -->
-                    <img src="../Content/image/logo.png" alt="">
+                    <a class="navbar-brand" href="#">Logo</a>
 
                     <!-- Links -->
                     <ul class="navbar-nav">
@@ -22,19 +22,19 @@
                                 Quản Trị Doanh Mục
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Loại Sản Phẩm</a>
+                                <a class="dropdown-item" href="index.php?action=loai">Loại Sản Phẩm</a>
                                 <a class="dropdown-item" href="index.php?action=hanghoa">Sản Phẩm</a>
+                                <a class="dropdown-item" href="index.php?action=cthanghoa">Chi tiết Sản Phẩm</a>
                                 <a class="dropdown-item" href="#">Loại menu</a>
                             </div>
                         </li>
-                        <img src="../Content/image/hoahong.png" alt="">
                         <!-- Thống kê -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                 Thống Kê
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Sản Phẩm bán được nhiều Nhất</a>
+                                <a class="dropdown-item" href="index.php?action=thongke">Sản Phẩm bán được nhiều Nhất</a>
                                 <a class="dropdown-item" href="#">Sản Phẩm chưa được giao</a>
                                 <a class="dropdown-item" href="#">Sản phẩm bán ít nhất</a>
                                 <a class="dropdown-item" href="">Thống kê</a>
